@@ -87,7 +87,7 @@ try:
    tmp = poly.polyroots(poly_coeff_1)[0] #regression lineaire de l ordre manche
    
    
-   i_vr_egv = [i for i in tarange(len(dt)) if (dt[i] > tmp  and DDM[i]<-0.5) or DDM[i]<-4.0 ][0] 
+   i_vr_egv = [i for i in range(len(dt)) if (dt[i] > tmp  and DDM[i]<-0.5) or DDM[i]<-4.0 ][0] 
    t_vr_egv_visu = TIME[i_vr_egv]
    adn.add_parameter('t_vr_egv_visu', [-9999 if i < i_vr_egv else 9999 for i in range(len(TIME))], '', datatype="[Donnees EV]")
    print 'instant debut rotation (detection EGV) => ',t_vr_egv_visu
@@ -95,7 +95,7 @@ except:
    print 'pb critere debut rotation'
    pass
 
-#Petite bite
+
 #--------------------------------------------------------------
 # analyse liftoff
 #--------------------------------------------------------------
